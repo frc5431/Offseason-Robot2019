@@ -32,11 +32,8 @@ public final static int ELEVATOR_LEFT_ID = ;
 public final static boolean ELEVATOR_LEFT_INVERTED = ;
 
 //Intake
-public final static int INTAKE_RIGHT_ID = ;
-public final static boolean INTAKE_RIGHT_INVERTED = ;
-
-public final static int INTAKE_LEFT_ID = ;
-public final static boolean INTAKE_LEFT_INVERTED = ;
+public final static int INTAKE_ID = ;
+public final static boolean INTAKE_INVERTED = ;
 
 //Climber
 public final static int CLIMBER_RIGHT_ID = ;
