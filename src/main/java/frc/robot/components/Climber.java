@@ -6,19 +6,12 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class Climber {
-    private final CANSparkMax rightClimb, leftClimb;
+    private final CANSparkMax climb;
 
     public Climber(){
-        rightClimb = new CANSparkMax(Constants.CLIMBER_RIGHT_ID, MotorType.kBrushless);
-        rightClimb.setInverted(Constants.CLIMBER_RIGHT_INVERTED);
+        climb = new CANSparkMax(Constants.CLIMBER_ID, MotorType.kBrushless);
+        climb.setInverted(Constants.CLIMBER_INVERTED);
         
-        leftClimb = new CANSparkMax(Constants.CLIMBER_LEFT_ID, MotorType.kBrushless);
-        leftClimb.setInverted(Constants.CLIMBER_LEFT_INVERTED);
-    }
-
-    public void climber(final double val){
-        rightClimb.set(val);
-        leftClimb.set(val);
     }
 
 }

@@ -36,9 +36,7 @@ public final static int INTAKE_ID = ;
 public final static boolean INTAKE_INVERTED = ;
 
 //Climber
-public final static int CLIMBER_RIGHT_ID = ;
-public final static boolean CLIMBER_RIGHT_INVERTED = ;
+public final static int CLIMBER_ID = ;
+public final static boolean CLIMBER_INVERTED = ;
 
-public final static int CLIMBER_LEFT_ID = ;
-public final static boolean CLIMBER_LEFT_INVERTED = ;
 }
