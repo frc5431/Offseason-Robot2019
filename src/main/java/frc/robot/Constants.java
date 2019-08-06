@@ -23,6 +23,10 @@ public final static boolean BACK_RIGHT_INVERTED = ;
 public final static int BACK_LEFT_ID = ;
 public final static boolean BACK_LEFT_INVERTED = ;
 
+//Climber Wheels
+public final static int CLIMBER_WHEELS_ID = ;
+public final static boolean CLIMBER_WHEELS_INVERTED = ;
+
 //Sparks
 //Elevator
 public final static int ELEVATOR_RIGHT_ID = ;
@@ -38,7 +42,4 @@ public final static boolean INTAKE_INVERTED = ;
 //Climber
 public final static int CLIMBER_ID = ;
 public final static boolean CLIMBER_INVERTED = ;
-
-public final static int CLIMBER_WHEELS_ID = ;
-public final static boolean CLIMBER_WHEELS_INVERTED = ;
 }
