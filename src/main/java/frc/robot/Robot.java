@@ -37,9 +37,8 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   private Intake intake;
   private Teleop teleop;
   private Vision vision;
-  
 
-  private List<Component<Robot>> components = List.of(climber, drivebase, elevator, intake, teleop, vision);
+  private List<Component<Robot>> components = List.of();
 
   /**
    * This function is run when the robot is first started up and should be
@@ -57,6 +56,8 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
     intake = new Intake();
     teleop = new Teleop();
     vision = new Vision();
+
+    components = List.of(climber, drivebase, elevator, intake, teleop, vision);
   }
 
   /**
