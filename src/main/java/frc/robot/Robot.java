@@ -7,11 +7,13 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.TimedRobot;
+import java.util.List;
+
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import frc.team5431.titan.core.joysticks.Xbox;
+import frc.team5431.titan.core.robot.Component;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -20,7 +22,7 @@ import frc.team5431.titan.core.joysticks.Xbox;
  * creating this project, you must also update the build.gradle file in the
  * project.
  */
-public class Robot extends TimedRobot {
+public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   private static final String kDefaultAuto = "Default";
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
@@ -28,6 +30,8 @@ public class Robot extends TimedRobot {
 
   private Xbox driver;
   private Xbox operator;
+
+  private List<Component<Robot>> components = List.of();
 
   /**
    * This function is run when the robot is first started up and should be
@@ -106,5 +110,10 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void testPeriodic() {
+  }
+
+  @Override
+  public List<Component<Robot>> getComponents() {
+    return components;
   }
 }
