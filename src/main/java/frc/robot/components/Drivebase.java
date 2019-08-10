@@ -1,10 +1,12 @@
 package frc.robot.components;
 
+import frc.robot.Robot;
 import frc.robot.Constants;
+import frc.team5431.titan.core.robot.Component;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;;
 
-public class Drivebase {
+public class Drivebase extends Component<Robot> {
     private final WPI_VictorSPX frontRight, frontLeft, backRight, backLeft;
 
     public Drivebase(){
@@ -34,6 +36,21 @@ public class Drivebase {
     public void drive(final double right, final double left){
         driveRight(right);
         driveLeft(left);
+    }
+
+    @Override
+    public void init(Robot robot) {
+
+    }
+
+    @Override
+    public void periodic(Robot robot) {
+
+    }
+
+    @Override
+    public void disabled(Robot robot) {
+
     }
 
 }

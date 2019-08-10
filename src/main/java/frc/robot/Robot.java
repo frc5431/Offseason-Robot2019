@@ -11,7 +11,7 @@ import java.util.List;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
+import frc.robot.components.*;
 import frc.team5431.titan.core.joysticks.Xbox;
 import frc.team5431.titan.core.robot.Component;
 
@@ -31,7 +31,15 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   private Xbox driver;
   private Xbox operator;
 
-  private List<Component<Robot>> components = List.of();
+  private Climber climber;
+  private Drivebase drivebase;
+  private Elevator elevator;
+  private Intake intake;
+  private Teleop teleop;
+  private Vision vision;
+  
+
+  private List<Component<Robot>> components = List.of(climber, drivebase, elevator, intake, teleop, vision);
 
   /**
    * This function is run when the robot is first started up and should be

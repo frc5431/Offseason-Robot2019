@@ -7,7 +7,7 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
 
 
-class Vision extends Component<Robot> {
+public class Vision extends Component<Robot> {
     public static enum LEDState{
         ON, OFF
     };

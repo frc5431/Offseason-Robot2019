@@ -1,11 +1,13 @@
 package frc.robot.components;
 
 import frc.robot.Constants;
+import frc.team5431.titan.core.robot.Component;
+import frc.robot.Robot;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
-public class Elevator {
+public class Elevator extends Component<Robot>{
     private final CANSparkMax rightElev, leftElev;
 
     public Elevator(){
@@ -19,6 +21,21 @@ public class Elevator {
     public void elevator(final double val){
         rightElev.set(val);
         leftElev.set(val);
+    }
+
+    @Override
+    public void init(Robot robot) {
+
+    }
+
+    @Override
+    public void periodic(Robot robot) {
+
+    }
+
+    @Override
+    public void disabled(Robot robot) {
+
     }
 
 }
