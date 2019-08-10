@@ -101,4 +101,11 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   public List<Component<Robot>> getComponents() {
     return components;
   }
+
+  /**
+   * @return the mode
+   */
+  public Mode getMode() {
+    return mode;
+  }
 }
