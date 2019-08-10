@@ -33,7 +33,7 @@ public class Drivebase extends Component<Robot> {
         backLeft.set(val);
     }
 
-    public void drive(final double right, final double left){
+    public void drive(final double left, final double right){
         driveRight(right);
         driveLeft(left);
     }
