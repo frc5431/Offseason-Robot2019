@@ -23,6 +23,12 @@ import frc.team5431.titan.core.robot.Component;
  * project.
  */
 public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
+  public static enum Mode{
+    DISABLED, AUTO, TELEOP, TEST
+  }
+
+  private Mode mode = Mode.DISABLED;
+
   private Xbox driver;
   private Xbox operator;
 
@@ -56,6 +62,7 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   @Override
   public void autonomousInit() {
     super.autonomousInit();
+    mode = Mode.AUTO;
     components.forEach((com)->com.init(this));
   }
 
@@ -68,6 +75,7 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   @Override
   public void teleopInit() {
     super.teleopInit();
+    mode = Mode.TELEOP;
     components.forEach((com)->com.init(this));
   }
 
@@ -77,6 +85,12 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
     components.forEach((com)->com.periodic(this));
   }
 
+  @Override
+  public void testInit() {
+    super.testInit();
+    mode = Mode.TEST;
+    components.forEach((com)->com.init(this));
+  }
   @Override
   public void testPeriodic() {
     super.testPeriodic();
