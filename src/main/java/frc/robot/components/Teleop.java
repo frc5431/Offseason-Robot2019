@@ -51,4 +51,10 @@ public class Teleop extends Component<Robot> {
 
     }
 
+    /**
+     * @return the driver
+     */
+    public Xbox getDriver() {
+        return driver;
+    }
 }

@@ -117,4 +117,11 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   public Dashboard getDashboard() {
     return dashboard;
   }
+
+  /**
+   * @return the teleop
+   */
+  public Teleop getTeleop() {
+    return teleop;
+  }
 }
