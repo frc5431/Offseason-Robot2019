@@ -29,9 +29,6 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
 
   private Mode mode = Mode.DISABLED;
 
-  private Xbox driver;
-  private Xbox operator;
-
   private Climber climber;
   private Drivebase drivebase;
   private Elevator elevator;
@@ -107,5 +104,12 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
    */
   public Mode getMode() {
     return mode;
+  }
+
+  /**
+   * @return the drivebase
+   */
+  public Drivebase getDrivebase() {
+    return drivebase;
   }
 }
