@@ -1,6 +1,7 @@
 package frc.robot.components;
 
 import frc.robot.Robot;
+import frc.robot.util.ControlMode;
 import frc.robot.Constants;
 import frc.team5431.titan.core.robot.Component;
 
@@ -8,6 +9,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;;
 
 public class Drivebase extends Component<Robot> {
     private final WPI_VictorSPX frontRight, frontLeft, backRight, backLeft;
+    private ControlMode controlMode = ControlMode.MANUAL;
 
     public Drivebase(){
         frontRight = new WPI_VictorSPX(Constants.FRONT_RIGHT_ID);
@@ -53,4 +55,10 @@ public class Drivebase extends Component<Robot> {
 
     }
 
+    /**
+     * @return the controlMode
+     */
+    public ControlMode getControlMode() {
+        return controlMode;
+    }
 }

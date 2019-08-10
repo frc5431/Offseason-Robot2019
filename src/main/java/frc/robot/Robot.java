@@ -9,10 +9,7 @@ package frc.robot;
 
 import java.util.List;
 
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.components.*;
-import frc.team5431.titan.core.joysticks.Xbox;
 import frc.team5431.titan.core.robot.Component;
 
 /**
@@ -35,6 +32,7 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
   private Intake intake;
   private Teleop teleop;
   private Vision vision;
+  private Dashboard dashboard;
 
   private List<Component<Robot>> components = List.of();
 
@@ -47,7 +45,7 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
     teleop = new Teleop();
     vision = new Vision();
 
-    components = List.of(climber, drivebase, elevator, intake, teleop, vision);
+    components = List.of(climber, drivebase, elevator, intake, teleop, vision, dashboard);
   }
 
   @Override
@@ -111,5 +109,12 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
    */
   public Drivebase getDrivebase() {
     return drivebase;
+  }
+
+  /**
+   * @return the dashboard
+   */
+  public Dashboard getDashboard() {
+    return dashboard;
   }
 }

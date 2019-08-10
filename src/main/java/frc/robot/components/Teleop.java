@@ -2,6 +2,7 @@ package frc.robot.components;
 
 import frc.robot.Constants;
 import frc.robot.Robot;
+import frc.robot.util.ControlMode;
 import frc.team5431.titan.core.joysticks.Xbox;
 import frc.team5431.titan.core.robot.Component;
 
@@ -27,9 +28,22 @@ public class Teleop extends Component<Robot> {
     @Override
     public void periodic(Robot robot) {
         final Drivebase drivebase = robot.getDrivebase();
+        final Dashboard dashboard = robot.getDashboard();
 
-        drivebase.drive(driver.getRawAxis(Xbox.Axis.LEFT_Y), driver.getRawAxis(Xbox.Axis.RIGHT_Y));
+        double left;
+        double right;
+        
+        if (dashboard.getTankChooser()) {
+            left = -driver.getRawAxis(Xbox.Axis.LEFT_Y);
+			right = -driver.getRawAxis(Xbox.Axis.RIGHT_Y);
+        } else {
+            left = -driver.getRawAxis(Xbox.Axis.LEFT_Y)+driver.getRawAxis(Xbox.Axis.LEFT_X)*.5;
+            right = -driver.getRawAxis(Xbox.Axis.LEFT_Y)-driver.getRawAxis(Xbox.Axis.LEFT_X)*.5;
+        }
 
+        if (drivebase.getControlMode() == ControlMode.MANUAL || left != 0.0 || right != 0.0) { 
+            drivebase.drive(left, right);
+        }
     }
 
     @Override
