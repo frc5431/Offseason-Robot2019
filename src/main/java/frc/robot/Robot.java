@@ -50,14 +50,6 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
-
-    // Init Xbox Controllers
-    driver = new Xbox(Constants.DRIVER_JOYSTICK_ID);
-    operator = new Xbox(Constants.OPERATOR_JOYSTICK_ID);
-
-    //Set Deadzone of controllers
-    driver.setDeadzone(Constants.DRIVER_JOYSTICK_DEADZONE);
-    operator.setDeadzone(Constants.OPERATOR_JOYSTICK_DEADZONE);
   }
 
   /**
