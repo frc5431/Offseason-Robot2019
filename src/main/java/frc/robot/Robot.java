@@ -50,6 +50,13 @@ public class Robot extends frc.team5431.titan.core.robot.Robot<Robot> {
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
+
+    climber = new Climber();
+    drivebase = new Drivebase();
+    elevator = new Elevator();
+    intake = new Intake();
+    teleop = new Teleop();
+    vision = new Vision();
   }
 
   /**
